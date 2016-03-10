@@ -1,9 +1,10 @@
 # workshop-jepara #
-> Materi untuk workshop, tanggal 19-20 Maret 2016
+
+## Materi untuk workshop, tanggal **19-20 Maret 2016** ##
 
 ----------
-## Notulensi PHP JOGLO RAYA 9 maret 2016 ##
-Hasil dari yg tadi sudah didiskusikan untuk workshop di Jepara, sebagai berikut :
+#### Notulensi PHP JOGLO RAYA 9 maret 2016 ####
+Hasil dari diskusi untuk workshop, sebagai berikut :
 
 Kasus :
 -------
