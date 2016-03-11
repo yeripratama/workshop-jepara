@@ -30,7 +30,7 @@ Tabel database **`db_siperpus`** :
     <th>type</th>
   </tr>
   <tr>
-    <td>kode_buku</td>
+    <td>id_buku</td>
     <td>`int`</td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@ Tabel database **`db_siperpus`** :
   </tr>
   <tr>
     <td>cover</td>
-    <td>`blob` || `varchar`</td>
+    <td>`varchar`</td>
   </tr>
 </table>
 1.b. **tb_kategori** <br />
@@ -80,8 +80,20 @@ Tabel database **`db_siperpus`** :
     <td>`int`</td>
   </tr>
   <tr>
-    <td>**?**</td>
-    <td>**?**</td>
+    <td>nama</td>
+    <td>`varchar`</td>
+  </tr>
+  <tr>
+    <td>alamat</td>
+    <td>`text`</td>
+  </tr>
+  <tr>
+    <td>jk</td>
+    <td>`enum(L,P)`</td>
+  </tr>
+  <tr>
+    <td>telp</td>
+    <td>`varchar`</td>
   </tr>
 </table>
 1.d. **tb_petugas** <br />
@@ -95,8 +107,16 @@ Tabel database **`db_siperpus`** :
     <td>`int`</td>
   </tr>
   <tr>
-    <td>**?**</td>
-    <td>**?**</td>
+    <td>nama</td>
+    <td>`varchar`</td>
+  </tr>
+  <tr>
+    <td>username</td>
+    <td>`varchar`</td>
+  </tr>
+  <tr>
+    <td>password</td>
+    <td>`varchar`</td>
   </tr>
 </table>
 2. Transaksi : <br />
@@ -111,8 +131,20 @@ Tabel database **`db_siperpus`** :
     <td>`int`</td>
   </tr>
   <tr>
-    <td>**?**</td>
-    <td>**?**</td>
+    <td>id_buku</td>
+    <td>`int`</td>
+  </tr>
+  <tr>
+    <td>id_anggota</td>
+    <td>`int`</td>
+  </tr>
+  <tr>
+    <td>tgl_pinjam</td>
+    <td>`date`</td>
+  </tr>
+  <tr>
+    <td>tgl_jatuh_tempo</td>
+    <td>`date`</td>
   </tr>
 </table>
 2.b. **tb_kembali** <br />
@@ -126,8 +158,16 @@ Tabel database **`db_siperpus`** :
     <td>`int`</td>
   </tr>
   <tr>
-    <td>**?**</td>
-    <td>**?**</td>
+    <td>id_pinjam</td>
+    <td>`int`</td>
+  </tr>
+  <tr>
+    <td>tgl_kembali</td>
+    <td>`date`</td>
+  </tr>
+  <tr>
+    <td>denda</td>
+    <td>`double`</td>
   </tr>
 </table>
 
