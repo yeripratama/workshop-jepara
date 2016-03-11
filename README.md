@@ -20,17 +20,17 @@ Goals :
 4. **Input** (data master & transaksi) **Proses** (telat kembali, denda) **Output** (tau jumlah yg telat/denda)
 5. Autentikasi (login)
 
-Tabel database **`db_siperpus`** :
+Tabel database **`siperpus`** :
 ----------------
 1. Master : <br />
-  1.a. **tb_buku** <br />
+  1.a. **buku** <br />
 <table>
   <tr>
     <th>field</th>
     <th>type</th>
   </tr>
   <tr>
-    <td>id_buku</td>
+    <td>buku_id</td>
     <td>`int`</td>
   </tr>
   <tr>
@@ -54,14 +54,14 @@ Tabel database **`db_siperpus`** :
     <td>`varchar`</td>
   </tr>
 </table>
-1.b. **tb_kategori** <br />
+1.b. **kategori** <br />
 <table>
   <tr>
     <th>field</th>
     <th>type</th>
   </tr>
   <tr>
-    <td>id_kategori</td>
+    <td>kategori_id</td>
     <td>`int`</td>
   </tr>
   <tr>
@@ -69,14 +69,14 @@ Tabel database **`db_siperpus`** :
     <td>`varchar`</td>
   </tr>
 </table>
-1.c. **tb_anggota** <br />
+1.c. **anggota** <br />
 <table>
   <tr>
     <th>field</th>
     <th>type</th>
   </tr>
   <tr>
-    <td>id_anggota</td>
+    <td>anggota_id</td>
     <td>`int`</td>
   </tr>
   <tr>
@@ -96,14 +96,14 @@ Tabel database **`db_siperpus`** :
     <td>`varchar`</td>
   </tr>
 </table>
-1.d. **tb_petugas** <br />
+1.d. **petugas** <br />
 <table>
   <tr>
     <th>field</th>
     <th>type</th>
   </tr>
   <tr>
-    <td>id_petugas</td>
+    <td>petugas_id</td>
     <td>`int`</td>
   </tr>
   <tr>
@@ -120,22 +120,22 @@ Tabel database **`db_siperpus`** :
   </tr>
 </table>
 2. Transaksi : <br />
-2.a. **tb_pinjam** <br />
+2.a. **pinjam** <br />
 <table>
   <tr>
     <th>field</th>
     <th>type</th>
   </tr>
   <tr>
-    <td>id_pinjam</td>
+    <td>pinjam_id</td>
     <td>`int`</td>
   </tr>
   <tr>
-    <td>id_buku</td>
+    <td>buku_id</td>
     <td>`int`</td>
   </tr>
   <tr>
-    <td>id_anggota</td>
+    <td>anggota_id</td>
     <td>`int`</td>
   </tr>
   <tr>
@@ -147,18 +147,18 @@ Tabel database **`db_siperpus`** :
     <td>`date`</td>
   </tr>
 </table>
-2.b. **tb_kembali** <br />
+2.b. **kembali** <br />
 <table>
   <tr>
     <th>field</th>
     <th>type</th>
   </tr>
   <tr>
-    <td>id_kembali</td>
+    <td>kembali_id</td>
     <td>`int`</td>
   </tr>
   <tr>
-    <td>id_pinjam</td>
+    <td>pinjam_id</td>
     <td>`int`</td>
   </tr>
   <tr>
