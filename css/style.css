@@ -6,7 +6,7 @@
     width: 960px;
 	max-width: 100%;
     margin: 0 auto;
-    background: #2ecc40;
+    background: #42775A;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0px 0px 5px black;
@@ -32,7 +32,11 @@
 }
 
 .sidebar li a:hover {
-    background-color: #d35400;
+    background-color: #3B5949;
+}
+
+.sidebar li a.active{
+    background-color: #3B5949;
 }
 
 a {
@@ -65,6 +69,10 @@ table.data {
     border-collapse: collapse;
 }
 
+table.data th {
+    padding: 10px 5px;
+}
+
 table.data td {
     padding: 10px 5px;
     border: 1px solid #ccc;
@@ -73,7 +81,11 @@ table.data td {
 }
 
 table.data tr:hover:not(:first-child) {
-    background-color: #eee;
+    background-color: #f5f5f5;
+}
+
+table.data tr:not(:first-child):nth-of-type(odd) {
+    background-color: #f9f9f9;
 }
 
 
@@ -114,7 +126,13 @@ textarea {
 .btn-edit {
     background-color: #2980b9;
 }
+.btn-edit:hover{
+    background-color: #5DA7D8;
+}
 
 .btn-hapus {
     background-color: #c0392b;
+}
+.btn-hapus:hover {
+    background-color: #CE5A4E;
 }
