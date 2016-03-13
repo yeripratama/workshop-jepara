@@ -123,6 +123,19 @@ textarea {
     background-color: #d35400;
 }
 
+.btn-add {
+    background-color: #01B900;
+}
+
+.btn-add-div{
+    text-align: right;
+    margin-right: 20px;
+}
+
+.btn-add:hover {
+    background-color: #58DC57;
+}
+
 .btn-edit {
     background-color: #2980b9;
 }
