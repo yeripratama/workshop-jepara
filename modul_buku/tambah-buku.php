@@ -22,7 +22,7 @@ if (!isset($_SESSION['user'])) {
             <ul>
                 <li><a class="active" href="../modul_kategori/list-kategori.php">Data Kategori</a></li>
                 <li><a href="list-buku.php">Data Buku</a></li>
-                <li><a href="anggota_data.html">Data Anggota</a></li>
+                <li><a href="../modul_anggota/list-anggota.php">Data Anggota</a></li>
                 <li><a href="petugas_data.html">Data Petugas</a></li>
                 <li><a href="pinjam_data.html">Peminjaman</a></li>
                 <li><a href="kembail_data.html">Pengembalian</a></li>

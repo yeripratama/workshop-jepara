@@ -1,25 +1,18 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['user'])) {
     header('Location: ../login.php');
     exit();
 }
-
-include '../connection.php';
-
-// ambil artikel yang mau di edit
-$id_kategori = $_GET['id_kategori'];
-$query = "SELECT * FROM kategori WHERE kategori_id = $id_kategori";
-$hasil = mysqli_query($db, $query);
-$data_kategori = mysqli_fetch_assoc($hasil);
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Form Kategori</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <title>Form Anggota</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container clearfix">
@@ -27,9 +20,9 @@ $data_kategori = mysqli_fetch_assoc($hasil);
 
          <div class="sidebar">
             <ul>
-                <li><a class="active" href="list-kategori.php">Data Kategori</a></li>
+                <li><a href="../modul_kategori/list-kategori.php">Data Kategori</a></li>
                 <li><a href="../modul_buku/list-buku.php">Data Buku</a></li>
-                <li><a href="../modul_anggota/list-anggota.php">Data Anggota</a></li>
+                <li><a class="active" href="list-anggota.php">Data Anggota</a></li>
                 <li><a href="petugas_data.html">Data Petugas</a></li>
                 <li><a href="pinjam_data.html">Peminjaman</a></li>
                 <li><a href="kembail_data.html">Pengembalian</a></li>
@@ -38,12 +31,21 @@ $data_kategori = mysqli_fetch_assoc($hasil);
         </div>
 
         <div class="content">
-            <h3>Edit Kategori</h3>
-            <form method="post" action="proses-edit-kategori.php">
-                <input type="hidden" name="id_kategori" id="id_kategori" value="<?php echo $data_kategori['kategori_id']; ?>">
-                <p>Kategori</p>
-                <p><input type="text" name="kategori" value="<?php echo $data_kategori['kategori_nama'] ?>"></p>
-
+            <h3>Tambah Data Anggota</h3>
+            <form method="post" action="proses-tambah-anggota.php">
+                <p>Nama</p>
+                <p><input type="text" name="nama"></p>
+                <p>Alamat</p>
+                <p><input type="text" name="alamat"></p>
+                <p>Jenis Kelamin</p>
+                <p>
+                    <select name="jk">
+                        <option value="L">Laki-laki</option>
+                        <option value="P">Perempuan</option>
+                    </select>
+                </p>
+                <p>Telepon</p>
+                <p><input type="text" name="no_telepon"></p>
                 <p>
                     <input type="submit" class="btn btn-submit" value="Simpan">
                     <input type="reset" class="btn btn-submit" value="Batal" onclick="self.history.back();">
