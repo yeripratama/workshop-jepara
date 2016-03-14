@@ -17,8 +17,8 @@ include 'proses-list-kategori.php';
 
          <div class="sidebar">
             <ul>
-                <li><a class="active"   href="list-kategori.php">Data Kategori</a></li>
-                <li><a href="buku_data.html">Data Buku</a></li>
+                <li><a class="active" href="list-kategori.php">Data Kategori</a></li>
+                <li><a href="../modul_buku/list-buku.php">Data Buku</a></li>
                 <li><a href="anggota_data.html">Data Anggota</a></li>
                 <li><a href="petugas_data.html">Data Petugas</a></li>
                 <li><a href="pinjam_data.html">Peminjaman</a></li>
