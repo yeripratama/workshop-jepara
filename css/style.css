@@ -63,6 +63,12 @@ a {
    clear: both;
 }
 
+
+body{
+    margin: 0;
+    background : #798E82;
+}
+
 /*tabel*/
 table.data {
     width: 100%;
@@ -80,6 +86,15 @@ table.data td {
     border-right: none;
 }
 
+table.data td a.link {
+    color: #3F27E6;
+    text-decoration: underline;
+}
+table.data td a.link:hover {
+    color: #347FF7;
+    text-decoration: underline;
+}
+
 table.data tr:hover:not(:first-child) {
     background-color: #f5f5f5;
 }
@@ -92,12 +107,13 @@ table.data tr:not(:first-child):nth-of-type(odd) {
 /*form*/
 
 .form{
-	background: #2ecc40;
+    background: #42775A;
     border-radius: 5px;
-    padding: 10px;
+    padding: 4px 20px 15px 20px;
     box-shadow: 0px 0px 5px black;
     color: #FFF;
     margin: 0 auto;
+    width: 430px;
 }
 
 input, textarea, select {
@@ -120,7 +136,11 @@ textarea {
 }
 
 .btn-submit {
-    background-color: #d35400;
+    background-color: #C35045;
+}
+
+.btn-submit:hover {
+    background-color: #CA665C;
 }
 
 .btn-add {
