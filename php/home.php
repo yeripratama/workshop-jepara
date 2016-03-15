@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+
+    //jika belum login, alihkan ke login
+    if (empty($_SESSION['user'])) {
+        header('Location: login.php');
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
