@@ -29,8 +29,8 @@ include 'proses-list-buku.php';
 
         <div class="content">
             <h1>Daftar Buku</h1>
-            <div class="btn-add-div">
-                <a href="tambah-buku.php"><button class="btn btn-add">Tambah Data</button></a>
+            <div class="btn-tambah-div">
+                <a href="tambah-buku.php"><button class="btn btn-tambah">Tambah Data</button></a>
             </div>
             <?php if (empty($data_buku)) : ?>
             Tidak ada data.

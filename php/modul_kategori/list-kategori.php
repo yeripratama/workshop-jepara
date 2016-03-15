@@ -29,8 +29,8 @@ include 'proses-list-kategori.php';
 
         <div class="content">
             <h1>Daftar Kategori</h1>
-            <div class="btn-add-div">
-                <a href="tambah-kategori.php"><button class="btn btn-add">Tambah Data</button></a>
+            <div class="btn-tambah-div">
+                <a href="tambah-kategori.php"><button class="btn btn-tambah">Tambah Data</button></a>
             </div>
             <?php if (empty($data_kategori)) : ?>
             Tidak ada data.
