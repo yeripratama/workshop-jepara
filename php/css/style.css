@@ -1,10 +1,10 @@
 *{
-	font-family: sans-serif;
-	font-weight: 100;
+    font-family: sans-serif;
+    font-weight: 100;
 }
 .container {
     width: 960px;
-	max-width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     background: #42775A;
     border-radius: 5px;
@@ -63,6 +63,12 @@ a {
    clear: both;
 }
 
+
+body{
+    margin: 0;
+    background : #798E82;
+}
+
 /*tabel*/
 table.data {
     width: 100%;
@@ -80,6 +86,15 @@ table.data td {
     border-right: none;
 }
 
+table.data td a.link {
+    color: #3F27E6;
+    text-decoration: underline;
+}
+table.data td a.link:hover {
+    color: #347FF7;
+    text-decoration: underline;
+}
+
 table.data tr:hover:not(:first-child) {
     background-color: #f5f5f5;
 }
@@ -92,12 +107,13 @@ table.data tr:not(:first-child):nth-of-type(odd) {
 /*form*/
 
 .form{
-	background: #2ecc40;
+    background: #42775A;
     border-radius: 5px;
-    padding: 10px;
+    padding: 4px 20px 15px 20px;
     box-shadow: 0px 0px 5px black;
     color: #FFF;
     margin: 0 auto;
+    width: 430px;
 }
 
 input, textarea, select {
@@ -120,20 +136,24 @@ textarea {
 }
 
 .btn-submit {
-    background-color: #d35400;
+    background-color: #C35045;
 }
 
-.btn-add {
-    background-color: #01B900;
+.btn-submit:hover {
+    background-color: #CA665C;
 }
 
-.btn-add-div{
+.btn-tambah {
+    background-color: #27ae60;
+}
+
+.btn-tambah-div{
     text-align: right;
     margin-right: 20px;
 }
 
-.btn-add:hover {
-    background-color: #58DC57;
+.btn-tambah:hover {
+    background-color: #2ecc71;
 }
 
 .btn-edit {
@@ -148,8 +168,4 @@ textarea {
 }
 .btn-hapus:hover {
     background-color: #CE5A4E;
-}
-
-.buku-cover {
-    max-width: 50px;
 }

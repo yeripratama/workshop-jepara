@@ -19,7 +19,7 @@ $data_kategori = mysqli_fetch_assoc($hasil);
 <head>
     <meta charset="UTF-8">
     <title>Form Kategori</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container clearfix">
