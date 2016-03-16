@@ -23,7 +23,7 @@
                 <li><a href="modul_buku/list-buku.php">Data Buku</a></li>
                 <li><a href="anggota_data.html">Data Anggota</a></li>
                 <li><a href="petugas_data.html">Data Petugas</a></li>
-                <li><a href="pinjam_data.html">Peminjaman</a></li>
+                <li><a href="modul_peminjaman/pinjam-data.php">Peminjaman</a></li>
                 <li><a href="kembail_data.html">Pengembalian</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
