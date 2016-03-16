@@ -40,7 +40,7 @@ $data_pinjam = mysqli_fetch_assoc($hasil);
         </div>
 
         <div class="content">
-            <h3>Tambah Data Peminjaman</h3>
+            <h3>Edit Data Peminjaman</h3>
             <form action="proses-edit-pinjam.php" method="post">
             <input type="hidden" name="pinjam_id" value="<?php echo $id_pinjam ?>">
                 <p>Buku</p>
