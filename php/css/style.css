@@ -169,3 +169,7 @@ textarea {
 .btn-hapus:hover {
     background-color: #CE5A4E;
 }
+
+.buku-cover {
+    max-width: 50px;
+}
