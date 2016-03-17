@@ -28,7 +28,7 @@ $denda = hitung_denda($tgl_kembali, $data_pinjam['tgl_jatuh_tempo']);
         <?php include '../sidebar.php' ?>
 
         <div class="content">
-            <h3>Transaksi Peminjaman</h3>
+            <h3>Transaksi Pengembalian Buku</h3>
             <form method="post" action="proses-pengembalian.php">
                 <input type="hidden" name="pinjam_id" value="<?php echo $data_pinjam['pinjam_id'] ?>">
                 <input type="hidden" name="tgl_kembali" value="<?php echo $tgl_kembali ?>">

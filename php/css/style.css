@@ -135,6 +135,10 @@ textarea {
     padding: 10px;
 }
 
+table .btn{
+    font-size: 12px;
+}
+
 .btn-submit {
     background-color: #C35045;
 }
