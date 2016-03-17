@@ -28,7 +28,7 @@ include 'proses-list-pinjam-data.php';
         <div class="content">
             <h1>Daftar Peminjaman</h1>
             <div class="btn-tambah-div">
-                <a href="pinjam-form.php"><button class="btn btn-tambah">Tambah Data</button></a>
+                <a href="pinjam-form.php"><button class="btn btn-tambah">Transaksi Baru</button></a>
             </div>
             <?php if (empty($data_pinjam)) : ?>
             Tidak ada data.
@@ -61,7 +61,7 @@ include 'proses-list-pinjam-data.php';
                     </td>
                     <td>
                         <?php if (empty($pinjam['tgl_kembali'])): ?>
-                            <a href="kembali_form.html" class="link" title="klik untuk proses pengembalian">pinjam</a>
+                            <a href="../modul_pengembalian/pengembalian.php?id_pinjam=<?php echo $pinjam['pinjam_id'] ?>" class="link" title="klik untuk proses pengembalian">pinjam</a>
                         <?php else: ?>
                             kembali  
                         <?php endif ?>

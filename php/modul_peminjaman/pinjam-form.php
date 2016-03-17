@@ -36,7 +36,7 @@ include '../modul_anggota/proses-list-anggota.php';
         </div>
 
         <div class="content">
-            <h3>Tambah Data Peminjaman</h3>
+            <h3>Transaksi Peminjaman</h3>
             <form action="proses-tambah-pinjam.php" method="post">
                 <p>Buku</p>
                 <p>
