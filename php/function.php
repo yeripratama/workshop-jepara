@@ -14,7 +14,8 @@ function ambil_kategori($db)
     return $data_kategori;
 }
 
-function hitung_denda($tgl_kembali, $tgl_jatuh_tempo) {
+function hitung_denda($tgl_kembali, $tgl_jatuh_tempo)
+{
     if (strtotime( $tgl_kembali ) > strtotime($tgl_jatuh_tempo)) {
         $kembali = new DateTime($tgl_kembali); 
         $jatuh_tempo   = new DateTime($tgl_jatuh_tempo); 
@@ -28,4 +29,20 @@ function hitung_denda($tgl_kembali, $tgl_jatuh_tempo) {
     }
 
     return $denda;
+}
+
+function cek_stok($db, $buku_id)
+{
+    $q = "SELECT buku_jumlah FROM buku WHERE buku_id = $buku_id";
+    $hasil = mysqli_query($db, $q);
+    $hasil = mysqli_fetch_assoc($hasil);
+    $stok = $hasil['buku_jumlah'];
+
+    return $stok;
+}
+
+function kurangi_stok($db, $buku_id)
+{
+    $q = "UPDATE buku SET buku_jumlah = buku_jumlah - 1 WHERE buku_id = $buku_id";
+    mysqli_query($db, $q);
 }

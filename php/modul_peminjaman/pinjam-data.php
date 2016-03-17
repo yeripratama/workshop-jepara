@@ -59,11 +59,11 @@ include 'proses-list-pinjam-data.php';
                     </td>
                     <td>
                         
-                        <a href="edit-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>" class="btn btn-edit">Edit</a>
-                        <a href="proses-delete-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>"  onclick="return confirm('anda yakin akan menghapus data?')" class="btn btn-hapus">Hapus</a>
-                        <?php if (empty($pinjam['tgl_kembali'])){ ?>
+                        <?php if (empty($pinjam['tgl_kembali'])): ?>
                             <a href="../modul_pengembalian/pengembalian.php?id_pinjam=<?php echo $pinjam['pinjam_id'] ?>" class="btn btn-tambah" title="klik untuk proses pengembalian">Kembali</a>
-                        <?php } ?>
+                            <a href="edit-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>" class="btn btn-edit">Edit</a>
+                        <?php endif ?>
+                        <a href="proses-delete-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>"  onclick="return confirm('anda yakin akan menghapus data?')" class="btn btn-hapus">Hapus</a>
                     </td>
                 </tr>
                 <?php endforeach ?>
