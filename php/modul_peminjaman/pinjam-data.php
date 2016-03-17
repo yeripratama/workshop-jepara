@@ -32,7 +32,7 @@ include 'proses-list-pinjam-data.php';
                     <th>Tgl Jatuh Tempo</th>
                     <th>Tgl Kembali</th>
                     <th>Status</th>
-                    <th width="20%">Pilihan</th>
+                    <th width="30%">Pilihan</th>
                 </tr>
                 <?php foreach ($data_pinjam as $pinjam) : ?>
                 <tr>
@@ -52,14 +52,18 @@ include 'proses-list-pinjam-data.php';
                     </td>
                     <td>
                         <?php if (empty($pinjam['tgl_kembali'])): ?>
-                            <a href="../modul_pengembalian/pengembalian.php?id_pinjam=<?php echo $pinjam['pinjam_id'] ?>" class="link" title="klik untuk proses pengembalian">pinjam</a>
+                            pinjam
                         <?php else: ?>
                             kembali  
                         <?php endif ?>
                     </td>
                     <td>
+                        
                         <a href="edit-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>" class="btn btn-edit">Edit</a>
                         <a href="proses-delete-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>"  onclick="return confirm('anda yakin akan menghapus data?')" class="btn btn-hapus">Hapus</a>
+                        <?php if (empty($pinjam['tgl_kembali'])){ ?>
+                            <a href="../modul_pengembalian/pengembalian.php?id_pinjam=<?php echo $pinjam['pinjam_id'] ?>" class="btn btn-tambah" title="klik untuk proses pengembalian">Kembali</a>
+                        <?php } ?>
                     </td>
                 </tr>
                 <?php endforeach ?>
