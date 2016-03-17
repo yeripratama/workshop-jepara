@@ -25,17 +25,7 @@ $denda = hitung_denda($tgl_kembali, $data_pinjam['tgl_jatuh_tempo']);
     <div class="container clearfix">
         <h1>SI Perpustakaan</h1>
 
-         <div class="sidebar">
-            <ul>
-                <li><a class="active" href="pinjam_data.html">Peminjaman</a></li>
-                <li><a href="kembail_data.html">Pengembalian</a></li>
-                <li><a href="kategori_data.html">Data Kategori</a></li>
-                <li><a href="buku_data.html">Data Buku</a></li>
-                <li><a href="anggota_data.html">Data Anggota</a></li>
-                <li><a href="petugas_data.html">Data Petugas</a></li>
-                <li><a href="#" onclick="return confirm('anda yakin akan keluar?')">Logout</a></li>
-            </ul>
-        </div>
+        <?php include '../sidebar.php' ?>
 
         <div class="content">
             <h3>Transaksi Peminjaman</h3>

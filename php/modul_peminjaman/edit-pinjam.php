@@ -27,17 +27,7 @@ $data_pinjam = mysqli_fetch_assoc($hasil);
     <div class="container clearfix">
         <h1>SI Perpustakaan</h1>
 
-         <div class="sidebar">
-            <ul>
-                <li><a href="modul_kategori/list-kategori.php">Data Kategori</a></li>
-                <li><a href="modul_buku/list-buku.php">Data Buku</a></li>
-                <li><a href="anggota_data.html">Data Anggota</a></li>
-                <li><a href="petugas_data.html">Data Petugas</a></li>
-                <li><a href="modul_peminjaman/pinjam-data.php">Peminjaman</a></li>
-                <li><a href="kembail_data.html">Pengembalian</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </div>
+        <?php include '../sidebar.php' ?>
 
         <div class="content">
             <h3>Edit Data Peminjaman</h3>
