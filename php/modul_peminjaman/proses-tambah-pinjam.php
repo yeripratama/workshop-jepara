@@ -18,6 +18,7 @@ $tgl_jatuh_tempo    = date('Y-m-d',strtotime($_POST['tgl_jatuh_tempo']));
 $stok_buku = cek_stok($db, $buku);
 
 if ($stok_buku < 1) {
+	$_SESSION['messages'] = '<font color="red">Stok buku sudah habis, proses peminjaman gagal!</font>';
     header('Location: pinjam-form.php');
     exit();
 }
@@ -29,6 +30,8 @@ if ($hasil == true) {
 
     kurangi_stok($db, $buku);
 
+    $_SESSION['messages'] = '<font color="green">Peminjaman sukses!</font>';
+    
     header('Location: pinjam-data.php');
 } else {
     header('Location: pinjam-form.php');

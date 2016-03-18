@@ -18,6 +18,13 @@ include 'proses-list-pinjam-data.php';
 
         <div class="content">
             <h1>Daftar Peminjaman</h1>
+            <?php  
+            // Check message ada atau tidak
+            if(!empty($_SESSION['messages'])) {
+                echo $_SESSION['messages']; //menampilkan pesan 
+                unset($_SESSION['messages']); //menghapus pesan setelah refresh
+            }
+            ?>
             <div class="btn-tambah-div">
                 <a href="pinjam-form.php"><button class="btn btn-tambah">Transaksi Baru</button></a>
             </div>
@@ -51,19 +58,22 @@ include 'proses-list-pinjam-data.php';
                     ?>
                     </td>
                     <td>
+                        <?php $status = '' ?>
                         <?php if (empty($pinjam['tgl_kembali'])): ?>
                             pinjam
+                        <?php $status = 'pinjam' ?>
                         <?php else: ?>
-                            kembali  
+                            kembali
+                        <?php $status = 'kembali' ?>  
                         <?php endif ?>
                     </td>
                     <td>
                         
                         <?php if (empty($pinjam['tgl_kembali'])): ?>
                             <a href="../modul_pengembalian/pengembalian.php?id_pinjam=<?php echo $pinjam['pinjam_id'] ?>" class="btn btn-tambah" title="klik untuk proses pengembalian">Kembali</a>
-                            <a href="edit-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>" class="btn btn-edit">Edit</a>
+                            <a href="edit-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>&&status=<?php echo $status; ?>" class="btn btn-edit">Edit</a>
                         <?php endif ?>
-                        <a href="proses-delete-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>"  onclick="return confirm('anda yakin akan menghapus data?')" class="btn btn-hapus">Hapus</a>
+                        <a href="proses-delete-pinjam.php?id_pinjam=<?php echo $pinjam['pinjam_id']; ?>&&status=<?php echo $status; ?>&&buku_id=<?php echo $pinjam['buku_id']; ?>"  onclick="return confirm('anda yakin akan menghapus data?')" class="btn btn-hapus">Hapus</a>
                     </td>
                 </tr>
                 <?php endforeach ?>

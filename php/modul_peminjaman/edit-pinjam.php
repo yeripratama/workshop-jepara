@@ -31,6 +31,13 @@ $data_pinjam = mysqli_fetch_assoc($hasil);
 
         <div class="content">
             <h3>Edit Data Peminjaman</h3>
+            <?php  
+            // Check message ada atau tidak
+            if(!empty($_SESSION['messages'])) {
+                echo $_SESSION['messages']; //menampilkan pesan 
+                unset($_SESSION['messages']); //menghapus pesan setelah refresh
+            }
+            ?>
             <form action="proses-edit-pinjam.php" method="post">
             <input type="hidden" name="pinjam_id" value="<?php echo $id_pinjam ?>">
                 <p>Buku</p>
