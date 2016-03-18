@@ -27,6 +27,13 @@ include '../modul_anggota/proses-list-anggota.php';
 
         <div class="content">
             <h3>Transaksi Peminjaman</h3>
+            <?php
+            // Check message ada atau tidak
+            if(!empty($_SESSION['messages'])) {
+                echo $_SESSION['messages']; //menampilkan pesan 
+                unset($_SESSION['messages']); //menghapus pesan setelah refresh
+            }
+            ?>
             <form action="proses-tambah-pinjam.php" method="post">
                 <p>Buku</p>
                 <p>

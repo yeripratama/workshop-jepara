@@ -15,6 +15,9 @@ include 'proses-list-pengembalian.php';
         <?php include '../sidebar.php' ?>
         <div class="content">
             <h1>Daftar Pengembalian</h1>
+            <?php if (empty($data_kembali)) : ?>
+            Tidak ada data.
+            <?php else : ?>
             <table class="data">
                 <tr>
                     <th>Buku</th>
@@ -39,6 +42,7 @@ include 'proses-list-pengembalian.php';
                 <?php endforeach ?>
 
             </table>
+            <?php endif ?>
         </div>
 
     </div>

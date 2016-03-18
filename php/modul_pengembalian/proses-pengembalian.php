@@ -7,6 +7,7 @@ if (! isset($_SESSION['user'])) {
 }
 
 include '../connection.php';
+include '../function.php';
 
 $tgl_kembali = $_POST['tgl_kembali'];
 $denda = $_POST['denda'];
@@ -23,9 +24,10 @@ if ($hasil == true) {
     $hasil = mysqli_fetch_assoc($hasil);
     $buku_id = $hasil['buku_id'];
 
-    $q = "UPDATE buku SET buku_jumlah = buku_jumlah + 1 WHERE buku_id = $buku_id";
-    $update_jumlah = mysqli_query($db, $q);
+    tambah_stok($db, $buku_id);
+    // tambah stok
 
+    $_SESSION['messages'] = '<font color="green">Pengembalian buku sukses!</font>';
     header('Location: ../modul_peminjaman/pinjam-data.php');
 } else {
     header('Location: pengembalian.php?id_pinjam='. $pinjam_id);
