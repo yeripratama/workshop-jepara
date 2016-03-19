@@ -22,7 +22,7 @@ if ($status == 'pinjam') {
 	tambah_stok($db, $buku_id);
 }
 
-$query = "DELETE FROM pinjam WHERE pinjam_id = '$id_pinjam'";
+$query = "DELETE FROM pinjam WHERE pinjam_id = $id_pinjam";
 $hasil = mysqli_query($db, $query);
 
 if ($hasil == true) {
