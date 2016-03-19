@@ -35,7 +35,7 @@ include 'proses-list-kategori.php';
                     <td><?php echo $kategori['kategori_nama'] ?></td>
                     <td>
                         <a href="edit-kategori.php?id_kategori=<?php echo $kategori['kategori_id']; ?>" class="btn btn-edit">Edit</a>
-                        <a href="delete-kategori.php?id_kategori=<?php echo $kategori['kategori_id']; ?>" class="btn btn-hapus" onclick="return confirm('Hapus data ini?');">Hapus</a>
+                        <a href="delete-kategori.php?id_kategori=<?php echo $kategori['kategori_id']; ?>" class="btn btn-hapus" onclick="return confirm('anda yakin akan menghapus data?');">Hapus</a>
                     </td>
                 </tr>
                 <?php  endforeach ?>

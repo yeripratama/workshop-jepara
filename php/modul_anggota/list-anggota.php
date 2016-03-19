@@ -41,7 +41,7 @@ include 'proses-list-anggota.php';
                     <td><?php echo $anggota['anggota_telp'] ?></td>
                     <td>
                         <a href="edit-anggota.php?id_anggota=<?php echo $anggota['anggota_id']; ?>" class="btn btn-edit">Edit</a>
-                        <a href="delete-anggota.php?id_anggota=<?php echo $anggota['anggota_id']; ?>" class="btn btn-hapus" onclick="return confirm('Hapus data ini?');">Hapus</a>
+                        <a href="delete-anggota.php?id_anggota=<?php echo $anggota['anggota_id']; ?>" class="btn btn-hapus" onclick="return confirm('anda yakin akan menghapus data?');">Hapus</a>
                     </td>
                 </tr>
                 <?php  endforeach ?>
