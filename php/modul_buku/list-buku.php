@@ -43,7 +43,7 @@ include 'proses-list-buku.php';
                     <td><img class="buku-cover" src="cover/<?php echo $buku['buku_cover'] ?>"></td>
                     <td>
                         <a href="edit-buku.php?id_buku=<?php echo $buku['buku_id']; ?>" class="btn btn-edit">Edit</a>
-                        <a href="delete-buku.php?id_buku=<?php echo $buku['buku_id']; ?>" class="btn btn-hapus" onclick="return confirm('Hapus data ini?');">Hapus</a>
+                        <a href="delete-buku.php?id_buku=<?php echo $buku['buku_id']; ?>" class="btn btn-hapus" onclick="return confirm('anda yakin akan menghapus data?');">Hapus</a>
                     </td>
                 </tr>
                 <?php endforeach ?>

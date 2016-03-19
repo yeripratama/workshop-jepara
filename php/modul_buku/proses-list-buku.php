@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status()!=PHP_SESSION_ACTIVE) {
+	session_start();
+}
 
 // ... jika belum login, alihkan ke halaman login
 if (! isset($_SESSION['user'])) {
